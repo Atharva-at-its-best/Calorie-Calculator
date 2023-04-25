@@ -13,23 +13,49 @@ function createtable(e) {
   const zzz = document.getElementById('list').value;
 
   if (zzz === "1") {
-    document.getElementById('my-table').style.display = 'table';
+    document.getElementById('my-table1').style.display = 'table';
+    document.getElementById('my-table5').style.display = 'none';
+    document.getElementById('my-table4').style.display = 'none';
+    document.getElementById('my-table3').style.display = 'none';
+    document.getElementById('my-table2').style.display = 'none';
     document.getElementById('a').style.display = 'block';
+    document.getElementById('b').style.display = 'block';
   } else if (zzz === "2") {
-    document.getElementById('my-table').style.display = 'none';
+    document.getElementById('my-table2').style.display = 'table';
+    document.getElementById('my-table5').style.display = 'none';
+    document.getElementById('my-table4').style.display = 'none';
+    document.getElementById('my-table3').style.display = 'none';
+    document.getElementById('my-table1').style.display = 'none';
+    document.getElementById('b').style.display = 'block';
     document.getElementById('a').style.display = 'block';
   } else if (zzz === "3") {
-    document.getElementById('my-table').style.display = 'none';
+    document.getElementById('my-table3').style.display = 'table';
+    document.getElementById('my-table5').style.display = 'none';
+    document.getElementById('my-table4').style.display = 'none';
+    document.getElementById('my-table2').style.display = 'none';
+    document.getElementById('my-table1').style.display = 'none';
     document.getElementById('a').style.display = 'block';
+    document.getElementById('b').style.display = 'block';
   } else if (zzz === "4") {
-    document.getElementById('my-table').style.display = 'none';
+    document.getElementById('my-table4').style.display = 'table';
+    document.getElementById('my-table5').style.display = 'none';
+    document.getElementById('my-table3').style.display = 'none';
+    document.getElementById('my-table2').style.display = 'none';
+    document.getElementById('my-table1').style.display = 'none';
     document.getElementById('a').style.display = 'block';
+    document.getElementById('b').style.display = 'block';
   } else if (zzz === "5") {
-    document.getElementById('my-table').style.display = 'none';
+    document.getElementById('my-table5').style.display = 'table';
+    document.getElementById('my-table4').style.display = 'none';
+    document.getElementById('my-table3').style.display = 'none';
+    document.getElementById('my-table2').style.display = 'none';
+    document.getElementById('my-table1').style.display = 'none';
     document.getElementById('a').style.display = 'block';
+    document.getElementById('b').style.display = 'block';
   } else if (zzz === "0") {
     document.getElementById('my-table').style.display = 'none';
     document.getElementById('a').style.display = 'none';
+    document.getElementById('b').style.display = 'block';
   }
   e.preventDefault();
 }
