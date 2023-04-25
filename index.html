@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <title>Calorie Calculator</title>
+  <title>Calorie Counter</title>
 
   <style>
     #loading,
@@ -29,7 +29,7 @@
       align-items: center;
     }
 
-    #my-table {
+    #my-table1 {
       display: none;
       margin-top: 100px;
       margin-bottom: 100px;
@@ -43,8 +43,100 @@
       box-shadow: 7px 7px 7px yellowgreen, -7px 7px 7px yellowgreen, -7px -7px 7px yellowgreen, 7px -7px 7px yellowgreen;
     }
 
-    #my-table th,
-    #my-table td {
+    #my-table1 th,
+    #my-table1 td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    #my-table2 {
+      display: none;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 700px;
+      height: 300px;
+      border: 5px solid rgb(6, 86, 17) !important;
+      overflow: auto;
+      padding: 20px;
+      border-radius: 25px;
+      box-sizing: border-box;
+      box-shadow: 7px 7px 7px yellowgreen, -7px 7px 7px yellowgreen, -7px -7px 7px yellowgreen, 7px -7px 7px yellowgreen;
+    }
+
+    #my-table2 th,
+    #my-table2 td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    #my-table3 {
+      display: none;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 700px;
+      height: 300px;
+      border: 5px solid rgb(6, 86, 17) !important;
+      overflow: auto;
+      padding: 20px;
+      border-radius: 25px;
+      box-sizing: border-box;
+      box-shadow: 7px 7px 7px yellowgreen, -7px 7px 7px yellowgreen, -7px -7px 7px yellowgreen, 7px -7px 7px yellowgreen;
+    }
+
+    #my-table3 th,
+    #my-table3 td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    #my-table4 {
+      display: none;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 700px;
+      height: 300px;
+      border: 5px solid rgb(6, 86, 17) !important;
+      overflow: auto;
+      padding: 20px;
+      border-radius: 25px;
+      box-sizing: border-box;
+      box-shadow: 7px 7px 7px yellowgreen, -7px 7px 7px yellowgreen, -7px -7px 7px yellowgreen, 7px -7px 7px yellowgreen;
+    }
+
+    #my-table4 th,
+    #my-table4 td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    #my-table5 {
+      display: none;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 700px;
+      height: 300px;
+      border: 5px solid rgb(6, 86, 17) !important;
+      overflow: auto;
+      padding: 20px;
+      border-radius: 25px;
+      box-sizing: border-box;
+      box-shadow: 7px 7px 7px yellowgreen, -7px 7px 7px yellowgreen, -7px -7px 7px yellowgreen, 7px -7px 7px yellowgreen;
+    }
+
+    #my-table5 th,
+    #my-table5 td {
       text-align: left;
       padding: 8px;
       border-bottom: 1px solid #ddd;
@@ -104,7 +196,34 @@
       box-shadow: 5px 5px 5px yellowgreen, -5px 5px 5px yellowgreen, -5px -5px 5px yellowgreen, 5px -5px 5px yellowgreen;
     }
 
+    h7 {
+      border: 5px solid rgb(6, 86, 17);
+      border-radius: 10px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: white;
+      margin-top: 60px;
+      width: 700px;
+      text-align: center;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70px;
+      font-style: italic;
+      box-shadow: 5px 5px 5px yellowgreen, -5px 5px 5px yellowgreen, -5px -5px 5px yellowgreen, 5px -5px 5px yellowgreen;
+    }
+
     #a {
+      margin-bottom: 30px;
+      display: none;
+      font-size: 35px;
+      font-style: italic;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #b {
       margin-bottom: 30px;
       display: none;
       font-size: 35px;
@@ -120,7 +239,7 @@
     <div class="row">
       <div class="col-lg-6 mx-auto">
         <div class="card card-body text-center mt-5">
-          <h1 class="heading display-5 pb-3">Calorie Calculator</h1>
+          <h1 class="heading display-5 pb-3">Calorie Counter</h1>
           <form id="calorie-form">
 
             <div class="form-group row">
@@ -196,7 +315,7 @@
     </div>
   </div>
   <h6 id="a">List of High Calories Food</h6>
-  <table id="my-table">
+  <table id="my-table1">
     <thead>
       <tr>
         <th>Food Name</th>
@@ -310,19 +429,575 @@
         <td>1 cup</td>
         <td>150</td>
       </tr>
+    </tbody>
+  </table>
+  <table id="my-table2">
+    <thead>
+      <tr>
+        <th>Food Name</th>
+        <th>Serving</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mango</td>
+        <td>1 medium-sized fruit</td>
+        <td>135</td>
+      </tr>
+      <tr>
+        <td>Jackfruit</td>
+        <td>1 cup</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>1 medium-sized fruit</td>
+        <td>105</td>
+      </tr>
+      <tr>
+        <td>Sapota</td>
+        <td>1 medium-sized fruit</td>
+        <td>120</td>
+      </tr>
+      <tr>
+        <td>Guava</td>
+        <td>1 medium-sized fruit</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Avocado</td>
+        <td>1 medium-sized fruit</td>
+        <td>250</td>
+      </tr>
+      <tr>
+        <td>Sweet potato</td>
+        <td>1 cup</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>Beetroot</td>
+        <td>1 cup</td>
+        <td>60</td>
+      </tr>
+      <tr>
+        <td>Taro root</td>
+        <td>1 cup</td>
+        <td>140</td>
+      </tr>
+      <tr>
+        <td>Potato</td>
+        <td>1 medium-sized</td>
+        <td>160</td>
+      </tr>
+      <tr>
+        <td>Carrots</td>
+        <td>1 cup</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Plantains</td>
+        <td>1 cup</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>Dates</td>
+        <td>1 cup</td>
+        <td>415</td>
+      </tr>
+      <tr>
+        <td>Pineapple</td>
+        <td>1 cup</td>
+        <td>82</td>
+      </tr>
+      <tr>
+        <td>Papaya</td>
+        <td>1 cup</td>
+        <td>62</td>
+      </tr>
+      <tr>
+        <td>Grapes</td>
+        <td>1 cup</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Pomegranate</td>
+        <td>1 cup</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Sweet corn</td>
+        <td>1 cup</td>
+        <td>130</td>
+      </tr>
+      <tr>
+        <td>Drumstick leaves</td>
+        <td>1 cup</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td>Cluster beans</td>
+        <td>1 cup</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Yam</td>
+        <td>1 cup</td>
+        <td>160</td>
+      </tr>
+      <tr>
+        <td>Ridge gourd</td>
+        <td>1 cup</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Bottle gourd</td>
+        <td>1 cup</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>Okra</td>
+        <td>1 cup</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <td>Brinjal</td>
+        <td>1 cup</td>
+        <td>24</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="my-table3">
+    <thead>
+      <tr>
+        <th>Food Name</th>
+        <th>Serving</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Brinjal</td>
+        <td>1 cup</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>Green peas</td>
+        <td>1 cup</td>
+        <td>114</td>
+      </tr>
+      <tr>
+        <td>Broccoli</td>
+        <td>1 cup</td>
+        <td>55</td>
+      </tr>
+      <tr>
+        <td>Spinach</td>
+        <td>1 cup</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Cauliflower</td>
+        <td>1 cup</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td>1 medium-sized fruit</td>
+        <td>135</td>
+      </tr>
+      <tr>
+        <td>Jackfruit</td>
+        <td>1 cup</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>1 medium-sized fruit</td>
+        <td>105</td>
+      </tr>
+      <tr>
+        <td>Sapota</td>
+        <td>1 medium-sized fruit</td>
+        <td>120</td>
+      </tr>
+      <tr>
+        <td>Avocado</td>
+        <td>1 medium-sized fruit</td>
+        <td>250</td>
+      </tr>
+      <tr>
+        <td>Sweet potato</td>
+        <td>1 cup</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>Taro root</td>
+        <td>1 cup</td>
+        <td>140</td>
+      </tr>
+      <tr>
+        <td>Potato</td>
+        <td>1 medium-sized</td>
+        <td>160</td>
+      </tr>
+      <tr>
+        <td>Plantains</td>
+        <td>1 cup</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>Dates</td>
+        <td>1 cup</td>
+        <td>415</td>
+      </tr>
+      <tr>
+        <td>Pineapple</td>
+        <td>1 cup</td>
+        <td>82</td>
+      </tr>
+      <tr>
+        <td>Grapes</td>
+        <td>1 cup</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Pomegranate</td>
+        <td>1 cup</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Sweet corn</td>
+        <td>1 cup</td>
+        <td>130</td>
+      </tr>
+      <tr>
+        <td>Drumstick leaves</td>
+        <td>1 cup</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td>Cluster beans</td>
+        <td>1 cup</td>
+        <td>50 calories</td>
+      </tr>
+      <tr>
+        <td>Yam</td>
+        <td>1 cup</td>
+        <td>160 calories</td>
+      </tr>
+      <tr>
+        <td>Ridge gourd</td>
+        <td>1 cup</td>
+        <td>20 calories</td>
+      </tr>
+      <tr>
+        <td>Bottle gourd</td>
+        <td>1 cup</td>
+        <td>14 calories</td>
+      </tr>
+      <tr>
+        <td>Okra</td>
+        <td>1 cup</td>
+        <td>33 calories</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="my-table4">
+    <thead>
+      <tr>
+        <th>Food Name</th>
+        <th>Serving</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Biryani</td>
+        <td>1 cup</td>
+        <td>400 calories</td>
+      </tr>
+      <tr>
+        <td>Paratha</td>
+        <td>1 piece</td>
+        <td>250 calories</td>
+      </tr>
+      <tr>
+        <td>Chicken curry</td>
+        <td>1 cup</td>
+        <td>350 calories</td>
+      </tr>
+      <tr>
+        <td>Mutton curry</td>
+        <td>1 cup</td>
+        <td>400 calories</td>
+      </tr>
+      <tr>
+        <td>Chole bhature</td>
+        <td>1 plate</td>
+        <td>450 calories</td>
+      </tr>
+      <tr>
+        <td>Samosa</td>
+        <td>1 piece</td>
+        <td>250 calories</td>
+      </tr>
+      <tr>
+        <td>Paneer tikka</td>
+        <td>1 skewer</td>
+        <td>300 calories</td>
+      </tr>
+      <tr>
+        <td>Butter chicken</td>
+        <td>1 cup</td>
+        <td>400 calories</td>
+      </tr>
+      <tr>
+        <td>Rajma chawal</td>
+        <td>1 plate</td>
+        <td>350 calories</td>
+      </tr>
+      <tr>
+        <td>Aloo paratha</td>
+        <td>1 piece</td>
+        <td>300 calories</td>
+      </tr>
+      <tr>
+        <td>Palak paneer</td>
+        <td>1 cup</td>
+        <td>300 calories</td>
+      </tr>
+      <tr>
+        <td>Matar paneer</td>
+        <td>1 cup</td>
+        <td>300 calories</td>
+      </tr>
+      <tr>
+        <td>Chicken biryani</td>
+        <td>1 cup</td>
+        <td>500 calories</td>
+      </tr>
+      <tr>
+        <td>Fish curry</td>
+        <td>1 cup</td>
+        <td>300 calories</td>
+      </tr>
+      <tr>
+        <td>Chicken kebab</td>
+        <td>1 skewer</td>
+        <td>150 calories</td>
+      </tr>
+      <tr>
+        <td>Mutton biryani</td>
+        <td>1 cup</td>
+        <td>550 calories</td>
+      </tr>
+      <tr>
+        <td>Naan</td>
+        <td>1 piece</td>
+        <td>200 calories</td>
+      </tr>
+      <tr>
+        <td>Lassi</td>
+        <td>1 glass</td>
+        <td>200 calories</td>
+      </tr>
+      <tr>
+        <td>Rasgulla</td>
+        <td>1 piece</td>
+        <td>150 calories</td>
+      </tr>
+      <tr>
+        <td>Gulab jamun</td>
+        <td>1 piece</td>
+        <td>150 calories</td>
+      </tr>
+      <tr>
+        <td>Jalebi</td>
+        <td>1 piece</td>
+        <td>100 calories</td>
+      </tr>
+      <tr>
+        <td>Papdi chaat</td>
+        <td>1 plate</td>
+        <td>350 calories</td>
+      </tr>
+      <tr>
+        <td>Aloo tikki</td>
+        <td>1 piece</td>
+        <td>100 calories</td>
+      </tr>
+      <tr>
+        <td>Dosa</td>
+        <td>1 piece</td>
+        <td>200 calories</td>
+      </tr>
+      <tr>
+        <td>Idli</td>
+        <td>2 pieces</td>
+        <td>150 calories</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="my-table5">
+    <thead>
+      <tr>
+        <th>Food Name</th>
+        <th>Serving</th>
+        <th>Calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pumpkin</td>
+        <td>1 cup</td>
+        <td>50 calories</td>
+      </tr>
+      <tr>
+        <td>Plantain</td>
+        <td>1 medium-sized</td>
+        <td>220 calories</td>
+      </tr>
+      <tr>
+        <td>Papaya</td>
+        <td>1 cup</td>
+        <td>60 calories</td>
+      </tr>
+      <tr>
+        <td>Grapes</td>
+        <td>1 cup</td>
+        <td>110 calories</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>1 medium-sized</td>
+        <td>95 calories</td>
+      </tr>
+      <tr>
+        <td>Guava</td>
+        <td>1 medium-sized</td>
+        <td>45 calories</td>
+      </tr>
+      <tr>
+        <td>Watermelon</td>
+        <td>1 cup</td>
+        <td>45 calories</td>
+      </tr>
+      <tr>
+        <td>Muskmelon</td>
+        <td>1 cup</td>
+        <td>60 calories</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>1 medium-sized</td>
+        <td>60 calories</td>
+      </tr>
+      <tr>
+        <td>Chickpeas</td>
+        <td>1 cup</td>
+        <td>270 calories</td>
+      </tr>
+      <tr>
+        <td>Lentils</td>
+        <td>1 cup</td>
+        <td>230 calories</td>
+      </tr>
+      <tr>
+        <td>Peanuts</td>
+        <td>1/4 cup</td>
+        <td>207 calories</td>
+      </tr>
+      <tr>
+        <td>Avocado</td>
+        <td>1 medium-sized</td>
+        <td>320 calories</td>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td>1 medium-sized</td>
+        <td>135 calories</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>1 medium-sized</td>
+        <td>105 calories</td>
+      </tr>
+      <tr>
+        <td>Dates</td>
+        <td>3 pieces</td>
+        <td>200 calories</td>
+      </tr>
+      <tr>
+        <td>Pineapple</td>
+        <td>1 cup</td>
+        <td>80 calories</td>
+      </tr>
+      <tr>
+        <td>Pomegranate</td>
+        <td>1 medium-sized</td>
+        <td>105 calories</td>
+      </tr>
+      <tr>
+        <td>Custard apple</td>
+        <td>1 medium-sized</td>
+        <td>120 calories</td>
+      </tr>
+      <tr>
+        <td>Jackfruit</td>
+        <td>1 cup</td>
+        <td>155 calories</td>
+      </tr>
+      <tr>
+        <td>Sapota</td>
+        <td>1 medium-sized</td>
+        <td>115 calories</td>
+      </tr>
+      <tr>
+        <td>Sweet potato</td>
+        <td>1 medium-sized</td>
+        <td>115 calories</td>
+      </tr>
+      <tr>
+        <td>Yam</td>
+        <td>1 cup</td>
+        <td>150 calories</td>
+      </tr>
+      <tr>
+        <td>Taro root</td>
+        <td>1 cup</td>
+        <td>200 calories</td>
+      </tr>
+      <tr>
+        <td>Beetroot</td>
+        <td>1 cup</td>
+        <td>60 calories</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-      <script src="app.js"></script>
+  <h7 id="b">Stay committed to your fitness goals and your high calorie diet, and results will suprise you because,
+    Consistency is key!!</h7>
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
